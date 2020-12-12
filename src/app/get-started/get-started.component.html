@@ -1,0 +1,258 @@
+ <!-- main-wrapper -->
+ <div class="main-wrapper">
+    <section class="video banner">
+      <div class="overlay"></div>
+      <video></video>
+      <div class="container h-100">
+        <div class="d-flex h-100 text-left align-items-left">
+          <div class="w-100 text-white">
+            <h1 class="font-weight-bold">FRENCH NEW WAVE FILMS</h1>
+            <div class="col-12">
+              <h4>
+                Chapter 1 &nbsp;&nbsp;<button
+                  class="btn btn-outline-light btn-lg2"
+                >
+                  20 lessons (6 Hours)
+                </button>
+              </h4>
+            </div>
+            <div class="w-100 mt-auto3">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <h2>Buy The Course To Continue Learning</h2>
+                  <button
+                    class="btn btn-light btn-lg2 text-uppercase"
+                    data-toggle="modal"
+                    data-target="#payment-modal"
+                  >
+                    Get Started
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div
+      class="modal fade"
+      id="payment-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modelTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title text-center w-fill">
+              Choose Payment Method
+            </h3>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body px-5">
+            <form action="">
+              <div class="form-group">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      name="method"
+                      id="method"
+                      value="credit/debit"
+                      checked
+                    />
+                    Credit/Debit Card<br />
+                    <small class="text-muted"
+                      >Visa, Master Card, American Express</small
+                    >
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  class="form-control form-control-lg"
+                  placeholder="Card Number"
+                  aria-describedby="helpId"
+                />
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      class="form-control form-control-lg"
+                      placeholder="MM/YYY"
+                      aria-describedby="helpId"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      class="form-control form-control-lg"
+                      placeholder="Security Code"
+                      aria-describedby="helpId"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <h5 class="text-uppercase">Billing Address</h5>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  class="form-control form-control-lg"
+                  placeholder="Street"
+                  aria-describedby="helpId"
+                />
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      class="form-control form-control-lg"
+                      placeholder="City/Town"
+                      aria-describedby="helpId"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      class="form-control form-control-lg"
+                      placeholder="State"
+                      aria-describedby="helpId"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      class="form-control form-control-lg"
+                      placeholder="Pin Code"
+                      aria-describedby="helpId"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      class="form-control form-control-lg"
+                      placeholder="Phone Number"
+                      aria-describedby="helpId"
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn float-right btn-md btn-lg2 text-light bg-theme-color float-right"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+          $("#play").click(function () {
+            $(this).addClass("d-none");
+            $("#pause").removeClass("d-none");
+            $("section video").css("display", "block");
+          });
+        });
+  
+        $(document).ready(function () {
+          $("#pause").click(function () {
+            $(this).addClass("d-none");
+            $("#play").removeClass("d-none");
+            $("video").css("display", "none");
+          });
+        });
+        $("#AddCaraosal").owlCarousel({
+          lazyLoad: true,
+          lazyLoadEager: 1,
+          loop: false,
+          margin: 15,
+          dots: false,
+          nav: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: false,
+            },
+            600: {
+              items: 2,
+              nav: false,
+            },
+            1000: {
+              items: 2,
+            },
+            1600: {
+              items: 2,
+            },
+          },
+        });
+        $(".owl-carousel").owlCarousel({
+          lazyLoad: true,
+          lazyLoadEager: 1,
+          loop: false,
+          margin: 15,
+          dots: false,
+          nav: true,
+          responsive: {
+            0: {
+              items: 2,
+              nav: false,
+            },
+            600: {
+              items: 3,
+              nav: false,
+            },
+            1000: {
+              items: 4,
+            },
+            1600: {
+              items: 5,
+            },
+          },
+        });
+      </script>

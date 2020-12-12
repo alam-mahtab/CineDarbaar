@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CineDarbaar</title>
+  <base href="/">
+
+  <meta name="title" content="CineDarbaar">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <meta property="og:image" content="assets/images/logo.png">
+  <meta name="theme-color" content="#eeeeee">
+
+  <!-- favicon -->
+  <link rel="icon" href="assets/images/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fontawesome5/css/all.min.css"/>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Owl Stylesheets -->
+  <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+</head>
+<body>
+<app-root></app-root>
+<!-- javascript -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+    
+<!-- Owl javascript -->
+<script src="assets/owlcarousel/owl.carousel.js"></script>
+    
+<!-- custom javascript -->
+<script src="assets/js/main.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#play").click(function () {
+      $(this).addClass("d-none");
+      $("#pause").removeClass("d-none");
+      $("section video").css("display", "block");
+    });
+  });
+
+  $(document).ready(function () {
+    $("#pause").click(function () {
+      $(this).addClass("d-none");
+      $("#play").removeClass("d-none");
+      $("video").css("display", "none");
+    });
+  });
+  $(document).ready(function () {
+        $("#pause").click(function () {
+          $(this).addClass("d-none");
+          $("#play").removeClass("d-none");
+          $("video").css("display", "none");
+        });
+      });
+      $("#AddCaraosal").owlCarousel({
+        lazyLoad: true,
+        lazyLoadEager: 1,
+        loop: false,
+        margin: 15,
+        dots: false,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false,
+          },
+          600: {
+            items: 2,
+            nav: false,
+          },
+          1000: {
+            items: 2,
+          },
+          1600: {
+            items: 2,
+          },
+        },
+      });
+      $(".owl-carousel").owlCarousel({
+        lazyLoad: true,
+        lazyLoadEager: 1,
+        loop: false,
+        margin: 15,
+        dots: false,
+        nav: true,
+        responsive: {
+          0: {
+            items: 2,
+            nav: false,
+          },
+          600: {
+            items: 3,
+            nav: false,
+          },
+          1000: {
+            items: 4,
+          },
+          1600: {
+            items: 5,
+          },
+        },
+      });
+</script>
+  <!-- MDB core JavaScript -->
+  <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
+></script>
+  
+</body>
+</html>
